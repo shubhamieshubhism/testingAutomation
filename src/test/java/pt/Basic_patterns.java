@@ -1,6 +1,4 @@
-package Patterns;
-
-import org.junit.Test;
+package pt;
 
 public class Basic_patterns {
     public static void main(String[] args) {

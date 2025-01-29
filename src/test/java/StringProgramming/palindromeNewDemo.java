@@ -30,7 +30,11 @@ public class palindromeNewDemo {
 
     public static void main(String[] args) {
         String input = "level noon madam";
-        //String[]words = input.split(" ");
-        findPalindrome(input);
+        String[]words = input.split(" ");
+        for(String word : words){
+            if(isPalindrome(word)){
+                System.out.println(word);
+            }
+        }
     }
 }
