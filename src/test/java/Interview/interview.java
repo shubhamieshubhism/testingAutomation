@@ -1,6 +1,5 @@
 package Interview;
 
-import java.util.Arrays;
 import java.util.LinkedHashSet;
 
 public class interview {
@@ -58,6 +57,31 @@ public class interview {
         return fourth;
     }
 
+    public static int findThirdMin(int [] arr){
+        if(arr==null || arr.length<3){
+            throw new IllegalArgumentException("There is no legal element in the array");
+        }
+        int first=Integer.MAX_VALUE,
+                second=Integer.MAX_VALUE,
+                third=Integer.MAX_VALUE;
+        for(int num : arr){
+            if(num<first){
+                third=second;
+                second=first;
+                first=num;
+            } else if (num<second && num!=first) {
+                third=second;
+                second=num;
+            } else if (num<third && num!=second && num!=first) {
+                third=num;
+            }
+        }
+        if(third==Integer.MAX_VALUE){
+            throw  new IllegalArgumentException("No third min found");
+        }
+        return third;
+    }
+
     public static int [] removeDuplicates(int[] arr){
         LinkedHashSet<Integer> set = new LinkedHashSet<>();
         for(int num : arr){
@@ -73,8 +97,8 @@ public class interview {
 
     public static void main(String[] args) {
         int []array={8,78,100,66,100,56,56,0,11};
-        int fourthLargest = fourthLargestNumber(array);
-        System.out.println(fourthLargest);
+        int thirdMin=findThirdMin(array);
+        System.out.println("The third minimum number is "+thirdMin);
 
 
 
