@@ -11,7 +11,6 @@ public class palindromeNewDemo {
             }
             left++;
             right--;
-
         }
         return true;
     }

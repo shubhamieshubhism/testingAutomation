@@ -10,6 +10,7 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.util.Arrays;
 
 public class ExceldataLoading {
     public static String[][] readExcelData(String filepath,String sheetName) throws IOException {
@@ -29,5 +30,12 @@ public class ExceldataLoading {
         workbook.close();
         fileinputstream.close();
         return data;
+    }
+
+    public static void main(String[] args) throws IOException {
+        String filePath = "C:\\Users\\PALASH TIRPUDE\\Desktop\\testingReadEcelData.xlsx";
+        String sheetName="Sheet1";
+        String[][] RED = readExcelData(filePath, sheetName);
+        System.out.println(Arrays.deepToString(RED));
     }
 }
