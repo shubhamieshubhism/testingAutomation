@@ -1,5 +1,4 @@
 package practiceing_java;
-
 public class reverse {
     private static String reverseSecondWord(String str){
         String [] words = str.split(" ");
@@ -11,7 +10,7 @@ public class reverse {
 
     private static String reverseWHoleString(String str){
         StringBuilder reverse = new StringBuilder(str);
-        reverse.reverse().toString();
+        reverse.reverse();
         return reverse.toString();
     }
 
@@ -29,8 +28,8 @@ public class reverse {
 
     public static void main(String[] args) {
         String input = "hello Shubham i am good";
-        //String output = reverseSecondWord(input);
-        //String output1 = reverseWHoleString(input);
+        String output = reverseSecondWord(input);
+        String output1 = reverseWHoleString(input);
         String output2 = reverseWOrdsOfString(input);
         System.out.println(output2);
     }
