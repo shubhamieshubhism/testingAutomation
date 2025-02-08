@@ -1,3 +1,7 @@
+package leetCode;
+
+import java.util.LinkedHashSet;
+
 public class longestSubstringwithoutReapeatingChar {
     public static int LongestSubStringWithoutReapeatingChar(String str){
         int n = str.length();

@@ -4,14 +4,16 @@ import java.util.HashSet;
 import java.util.Set;
 
 public class longestSubstringWithoutRepeatingCharacter {
-    public static int longestsubstringwtrepeatingchar(String s){
+    public static String longestsubstringwtrepeatingchar(String s){
         int n = s.length();
         int maxLength =0;
+        StringBuilder result = new StringBuilder();
         Set<Character> charSet = new HashSet<>();
         int left=0;
         for(int right = 0 ; right<n ; right++){
             if(!charSet.contains(s.charAt(right))){
                 charSet.add(s.charAt(right));
+
                 maxLength=Math.max(maxLength,right-left+1);
             }else{
                 while(charSet.contains(s.charAt(right))){
@@ -21,12 +23,13 @@ public class longestSubstringWithoutRepeatingCharacter {
             }
             charSet.add(s.charAt(right));
         }
-        return maxLength;
+        //return maxLength;
+        return charSet.toString();
     }
 
     public static void main(String[] args) {
         String input = "abcdabcdbb";
-        int output = longestsubstringwtrepeatingchar(input);
+        String output = longestsubstringwtrepeatingchar(input);
         System.out.println(output);
 
     }
