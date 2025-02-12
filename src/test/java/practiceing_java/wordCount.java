@@ -1,7 +1,4 @@
 package practiceing_java;
-
-import org.bouncycastle.jcajce.provider.digest.MD2;
-
 import java.util.HashMap;
 import java.util.Locale;
 import java.util.Map;
@@ -16,7 +13,6 @@ public class wordCount {
                 wordmap.put(word,wordmap.getOrDefault(word,0)+1);
             }
         }
-
         System.out.println("Word Occurrence");
         for(Map.Entry<String,Integer>entry : wordmap.entrySet()){
             System.out.println(entry.getKey()+" : "+entry.getValue());
