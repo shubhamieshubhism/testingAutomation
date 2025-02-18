@@ -2,14 +2,18 @@ package dataStructures;
 
 public class MAIN {
     public static void main(String[] args) {
-        LinkedListDemo ll = new LinkedListDemo(7);
-        ll.apppend(3);
-        ll.apppend(3);
-        ll.prepend(9);
-        ll.set(2,19);
-        ll.insert(3,77);
-        ll.reverse();
-        ll.printLL();
+        BinarySearchTree bst=new BinarySearchTree();
+        bst.insert(47);
+        bst.insert(21);
+        bst.insert(76);
+        bst.insert(18);
+        bst.insert(27);
+        bst.insert(52);
+        bst.insert(82);
+        System.out.println(bst.contains(17));
+        System.out.println(bst.contains(27));
+
+
 
 
     }
