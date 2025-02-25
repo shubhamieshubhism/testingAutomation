@@ -2,13 +2,10 @@ package letCodeAutomation;
 
 import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
-import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-import javax.swing.*;
-
-public class letCodeButton extends BeforeAndAfterSetup {
+public class LetCodeButton extends BeforeAndAfterSetup {
     @Test
     public void buttons(){
         //click on the button and then go back to the home page
