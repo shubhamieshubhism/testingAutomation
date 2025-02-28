@@ -22,7 +22,6 @@ public class LetCodeDragAndDrop extends BeforeAndAfterSetup {
         Actions action = new Actions(driver);
         action.dragAndDrop(src,target).perform();
         Thread.sleep(3000);
-
     }
 
 }
