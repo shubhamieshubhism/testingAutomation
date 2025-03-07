@@ -8,6 +8,5 @@ public class mise {
         IntStream.range(1,11).forEach(i-> System.out.println("10 * "+i+" = "+i*10));
         IntStream.range(1,11).forEach(i-> System.out.println("Number --> "+i));
 
-
     }
 }
