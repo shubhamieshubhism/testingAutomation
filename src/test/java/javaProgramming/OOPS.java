@@ -10,20 +10,44 @@ class animal{
         System.out.println("Animal noise");
     }
 }
-class dog extends animal{
-    void eat(){
+class dog extends animal {
+    void eat() {
         System.out.println("Dog eat");
     }
 
     @Override
-    void makeSound(){
+    void makeSound() {
         System.out.println("Dog noise");
     }
 
+}
 
-    public static void main(String[] args) {
-        dog mydog = new dog();
-        mydog.makeSound();
-        mydog.eat();
+
+interface vehicle{
+    void start();
+}
+
+abstract class car implements vehicle{
+    abstract void accelearator();
+}
+
+class sportcar extends car{
+    public void start(){
+        System.out.println("Car starts");
+    }
+
+    public void accelearator(){
+        System.out.println("accelearated");
     }
 }
+
+class test{
+    public static void main(String[] args) {
+        vehicle mycar = new sportcar();
+        mycar.start();
+
+    }
+}
+
+
+

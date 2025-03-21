@@ -13,6 +13,7 @@ public class LetCodeDragAndDrop extends BeforeAndAfterSetup {
         Actions act = new Actions(driver);
         WebElement element = driver.findElement(By.xpath("//h3[.='I can only be dragged within the dotted container']"));
         act.dragAndDropBy(element,20,20).perform();
+
     }
     @Test
     public void drop() throws InterruptedException {

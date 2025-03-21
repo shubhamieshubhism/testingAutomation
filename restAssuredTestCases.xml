@@ -1,0 +1,12 @@
+<suite name = "API test Suite" parallel = "method" thread-count = "3">
+
+    <test name ="API Tests">
+        <classes>
+            <class name = "restassured.GetUsetTest"></class>
+            <class name = "restassured.CreateUserTest"></class>
+            <class name = "restassured.UpdateUserTest"></class>
+            <class name = "restassured.DeleteUserTest"></class>
+            <class name = "restassured.JSONSchemaTest"></class>
+        </classes>
+    </test>
+</suite>

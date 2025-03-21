@@ -29,9 +29,21 @@ public class reverseAString {
         return reverse.reverse().toString();
     }
 
+    public static String reverseWordsInAString(String str){
+        StringBuilder reverse = new StringBuilder();
+        String [] words = str.split(" ");
+        for(int i = words.length-1;i>=0;i--){
+            reverse.append(words[i]);
+            if(i!=0){
+                reverse.append(" ");
+            }
+        }
+        return reverse.toString();
+    }
+
     public static void main(String[] args) {
         String input = "hello world how are you";
-        String output = reverseWholeString(input);
+        String output = reverseWordsInAString(input);
         System.out.println(output);
     }
 }

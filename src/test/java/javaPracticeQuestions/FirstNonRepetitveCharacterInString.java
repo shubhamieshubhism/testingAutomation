@@ -9,9 +9,9 @@ public class FirstNonRepetitveCharacterInString {
         for(char ch : str.toCharArray()){
             charCount.put(ch,charCount.getOrDefault(ch,0)+1);
         }
-        for(Map.Entry<Character,Integer>entry : charCount.entrySet()){
-            System.out.println("Key : "+entry.getKey()+" --> "+"Value : "+entry.getValue());
-        }
+//        for(Map.Entry<Character,Integer>entry : charCount.entrySet()){
+//            System.out.println("Key : "+entry.getKey()+" --> "+"Value : "+entry.getValue());
+//        }
         for(Map.Entry<Character,Integer>entry : charCount.entrySet()){
             if(entry.getValue()==1){
                 return entry.getKey();
