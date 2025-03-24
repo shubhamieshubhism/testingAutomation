@@ -41,9 +41,23 @@ public class reverseAString {
         return reverse.toString();
     }
 
+    public static String reverseStringRecursion(String str){
+        if(str.isEmpty())
+            return str;
+        return reverseStringRecursion(str.substring(1))+str.charAt(0);
+    }
+
+    public static String reverseUsingLoop(String str){
+        String result = "";
+        for(int i = str.length()-1 ; i>=0 ;i--){
+            result+=str.charAt(i);
+        }
+        return result;
+    }
+
     public static void main(String[] args) {
         String input = "hello world how are you";
-        String output = reverseWordsInAString(input);
+        String output = reverseUsingLoop(input);
         System.out.println(output);
     }
 }

@@ -13,10 +13,14 @@ public class CountWordOccurence {
             wordMap.put(word,wordMap.getOrDefault(word,0)+1);
         }
 
-        System.out.println("Word counts are as follows");
-        for(Map.Entry<String,Integer> entry : wordMap.entrySet()){
-            System.out.println(entry.getKey()+"-->"+entry.getValue());
-        }
+        //using lambda expression
+        wordMap.forEach((word,count) -> System.out.println(word + " --> "+count));
+
+
+//        System.out.println("Word counts are as follows");
+//        for(Map.Entry<String,Integer> entry : wordMap.entrySet()){
+//            System.out.println(entry.getKey()+"-->"+entry.getValue());
+//        }
     }
 
     public static void main(String[] args) {
