@@ -5,16 +5,16 @@ import java.util.Locale;
 import java.util.Map;
 
 public class CountWordOccurence {
-    public static void countWordOccurence(String str){
-        String [] words = str.toLowerCase().split("\\s+");
-        HashMap<String,Integer>wordMap = new HashMap<>();
-        for(String word : words){
-            word = word.replaceAll("[^a-zA-Z0-9]","");
-            wordMap.put(word,wordMap.getOrDefault(word,0)+1);
+    public static void countWordOccurence(String str) {
+        String[] words = str.toLowerCase().split("\\s+");
+        HashMap<String, Integer> wordMap = new HashMap<>();
+        for (String word : words) {
+            word = word.replaceAll("[^a-zA-Z0-9]", "");
+            wordMap.put(word, wordMap.getOrDefault(word, 0) + 1);
         }
 
         //using lambda expression
-        wordMap.forEach((word,count) -> System.out.println(word + " --> "+count));
+        wordMap.forEach((word, count) -> System.out.println(word + " --> " + count));
 
 
 //        System.out.println("Word counts are as follows");
