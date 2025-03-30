@@ -2,7 +2,7 @@ package CollectionAndMapQuestions;
 
 import java.util.Arrays;
 
-public class ReverseArrayWithoutExtraSpace {
+public class ArrayReverseArrayWithoutExtraSpace {
     public static void reverseArray(int[] array) {
         int left = 0;
         int right = array.length - 1;

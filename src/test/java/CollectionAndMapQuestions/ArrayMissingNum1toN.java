@@ -1,6 +1,6 @@
 package CollectionAndMapQuestions;
 
-public class MissingNum1toN {
+public class ArrayMissingNum1toN {
     public static int findMissingNum1ToN(int [] array,int n){
         int expectedSum = n*(n+1)/2;
         int actualSum = 0;

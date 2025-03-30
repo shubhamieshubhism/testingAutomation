@@ -31,7 +31,7 @@ public class PracticeFourConversion {
     /*
     * For input "abc12xyz34pqr56":
 
-Character	temp	sum	Action
+Character	temp	sum	       Action
 'a'          ""	    0	Non-digit, ignore
 'b'	         ""	    0	Non-digit, ignore
 'c'		     ""	    0	Non-digit, ignore
