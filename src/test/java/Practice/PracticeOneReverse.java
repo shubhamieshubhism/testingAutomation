@@ -14,7 +14,6 @@ public class PracticeOneReverse {
         String[] words = str.toLowerCase().split("\\s+");
         StringBuilder result = new StringBuilder();
         for (int i = words.length - 1; i >= 0; i--) {
-
             result.append(words[i]);
             if (i != 0) {
                 result.append(" ");
@@ -29,10 +28,15 @@ public class PracticeOneReverse {
         return reverse.toString();
     }
 
+    public static String reverseSentence(String str){
+        StringBuilder reverse = new StringBuilder(str).reverse();
+        return reverse.toString();
+    }
+
     public static void main(String[] args) {
         String input = "Hello Shubham How are you today ?";
 
-        String output = reverseString(input);
+        String output = reverseSentence(input);
         System.out.println(output);
     }
 }
