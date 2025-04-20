@@ -19,6 +19,4 @@ public class TakeScreenSHoot {
         File destFile = new File(destPath);
         FileHandler.copy(scr,destFile);
     }
-
-
 }

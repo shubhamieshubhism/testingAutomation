@@ -11,7 +11,7 @@ public class FindDuplicateChar {
              charCount.put(ch,charCount.getOrDefault(ch,0)+1);
         }
         charCount.forEach((key,value) ->{
-            if(value>1){
+            if(value==2){
                 System.out.println(key + " --> "+value);
             }
                 }

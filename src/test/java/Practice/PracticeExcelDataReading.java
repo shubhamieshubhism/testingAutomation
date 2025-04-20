@@ -1,4 +1,4 @@
-package SeleniumLogics;
+package Practice;
 
 import org.apache.poi.ss.usermodel.Cell;
 import org.apache.poi.ss.usermodel.Row;
@@ -14,14 +14,14 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
-public class ExceldataLoading {
-    public static String[][] readExcelData(String filepath, String sheetName) throws IOException {
-        FileInputStream fileinputstream = new FileInputStream(new File(filepath));
-        Workbook workbook = new XSSFWorkbook(fileinputstream);
+public class PracticeExcelDataReading {
+    public static String[][] readDataExcel(String filePath, String sheetName) throws IOException {
+        FileInputStream fileInputStream = new FileInputStream(filePath);
+        Workbook workbook = new XSSFWorkbook(fileInputStream);
         Sheet sheet = workbook.getSheet(sheetName);
         int rowCount = sheet.getPhysicalNumberOfRows();
         int colCount = sheet.getRow(0).getPhysicalNumberOfCells();
-        String[][] data = new String[rowCount - 1][colCount];
+        String data[][] = new String[rowCount - 1][colCount];
         for (int i = 1; i < rowCount; i++) {
             Row row = sheet.getRow(i);
             for (int j = 0; j < colCount; j++) {
@@ -30,41 +30,35 @@ public class ExceldataLoading {
             }
         }
         workbook.close();
-        fileinputstream.close();
+        fileInputStream.close();
         return data;
     }
 
-    //for extracting single column data or looping through it
-    public static List<String> readSingleColumnData(String filePath, int colIndex, String sheetName) throws IOException {
-        List<String> dataList = new ArrayList<>();
-        FileInputStream fileInputStream = new FileInputStream(filePath);
+    public static List<String> readDataFromSingleCOL(String filePath, String sheetName, int colInd) throws IOException {
+        List<String>dataList = new ArrayList<>();
+        FileInputStream fileInputStream=new FileInputStream(filePath);
         Workbook workbook = new XSSFWorkbook(fileInputStream);
         Sheet sheet = workbook.getSheet(sheetName);
-        for (Row row : sheet) {
-            Cell cell = row.getCell(colIndex);
-            if (cell != null) {
-                switch (cell.getCellType()) {
+        for(Row row : sheet){
+            Cell cell = row.getCell(colInd);
+            if(cell!=null){
+                switch (cell.getCellType()){
                     case STRING:
                         dataList.add(cell.getStringCellValue());
                         break;
-
                     case NUMERIC:
                         dataList.add(String.valueOf(cell.getNumericCellValue()));
                         break;
-
                     case BOOLEAN:
                         dataList.add(String.valueOf(cell.getBooleanCellValue()));
                         break;
-
                     case FORMULA:
                         dataList.add(String.valueOf(cell.getCellFormula()));
                         break;
-
                     default:
                         dataList.add("");
                 }
-
-            } else {
+            }else{
                 dataList.add("");
             }
         }
@@ -74,7 +68,19 @@ public class ExceldataLoading {
     public static void main(String[] args) throws IOException {
         String filePath = "C:\\Users\\PALASH TIRPUDE\\Desktop\\testingReadEcelData.xlsx";
         String sheetName = "Sheet1";
-        String[][] RED = readExcelData(filePath, sheetName);
-        System.out.println(Arrays.deepToString(RED));
+        //String[][] out = readDataExcel(filePath, sheetName);
+        List<String> dataCol = readDataFromSingleCOL(filePath, sheetName, 0);
+        boolean found =false;
+        for(String data:dataCol ){
+            if(data.equals("jony")){
+                found=true;
+                break;
+            }
+        }
+        if(found){
+            System.out.println("The excel sheet contains jon");
+        }else{
+            System.out.println("The excel sheet doesn't contains jon");
+        }
     }
 }
