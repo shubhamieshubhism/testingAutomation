@@ -18,7 +18,7 @@ public class PracticeTakeScreenShot {
     public static void takeScreenShot(WebDriver driver,String screenShotName) throws IOException {
 
         //String timeStap = new SimpleDateFormat("yyyy dd MM_HHmmss").format(new Date());
-        String timeStap = new SimpleDateFormat("dd MMM yyyy hh:mm a").format(new Date());
+        String timeStap = new SimpleDateFormat("ddMMM_HHmmss").format(new Date());
         TakesScreenshot ts = (TakesScreenshot) driver;
         File src = ts.getScreenshotAs(OutputType.FILE);
         String destPath = "screenshot/"+screenShotName+"_"+timeStap+".png";

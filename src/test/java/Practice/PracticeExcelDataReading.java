@@ -72,15 +72,16 @@ public class PracticeExcelDataReading {
         List<String> dataCol = readDataFromSingleCOL(filePath, sheetName, 0);
         boolean found =false;
         for(String data:dataCol ){
-            if(data.equals("jony")){
+            /*if(data.equals("jony")){
                 found=true;
                 break;
-            }
+            }*/
+            System.out.println(data);
         }
-        if(found){
+        /*if(found){
             System.out.println("The excel sheet contains jon");
         }else{
             System.out.println("The excel sheet doesn't contains jon");
-        }
+        }*/
     }
 }

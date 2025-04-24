@@ -26,7 +26,6 @@ public class PracticeTwoDuplicates {
         System.out.println("Duplicate character are as follows : ");
         charCount.forEach((character, count) ->
         {
-
             if (count > 1) {
                 System.out.print(character + " ");
             }

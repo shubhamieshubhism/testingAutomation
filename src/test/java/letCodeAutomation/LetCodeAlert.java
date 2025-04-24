@@ -15,6 +15,7 @@ public class LetCodeAlert extends BeforeAndAfterSetup{
         Alert simpleAlert = driver.switchTo().alert();
         simpleAlert.accept();
 
+
         //dismissing the alert
         driver.findElement(By.xpath("//button[.='Confirm Alert']")).click();
         Alert confirmAlert = driver.switchTo().alert();
