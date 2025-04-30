@@ -12,7 +12,7 @@ import java.util.Date;
 
 public class TakeScreenSHoot {
     public static void takingscreenshot(WebDriver driver, String screenshotname) throws IOException {
-        String timestamp = new SimpleDateFormat("yyyyDDmm_HHmmss").format(new Date());
+        String timestamp = new SimpleDateFormat("yyyyDDMM_HHmmss").format(new Date());
         TakesScreenshot ts = (TakesScreenshot)driver;
         File scr = ts.getScreenshotAs(OutputType.FILE);
         String destPath = "screenshot/"+screenshotname+"_"+timestamp+".png";
