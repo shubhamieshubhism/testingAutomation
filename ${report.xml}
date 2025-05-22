@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="30.721" tests="2" skipped="0" failures="2" errors="0">
+<testcase classname="use login functionality" name="login successfully" time="15.587">
+<failure type="java.lang.AssertionError" message="The following asserts failed:
+	expected [Congratulations student. You successfully logged in!] but found [Congratulations student. You successfully logged in]">
+<![CDATA[java.lang.AssertionError: The following asserts failed:
+	expected [Congratulations student. You successfully logged in!] but found [Congratulations student. You successfully logged in]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at cucumberTest.TestStepDefination.user_should_be_redirected_to_dashboard(TestStepDefination.java:56)
+	at ✽.user should be redirected to dashboard(file:///C:/shubham/java/IntellijProjects/testingAUtomationV1/src/test/resource/Test.feature:8)
+]]>
+</failure>
+<system-out><![CDATA[
+Given user is on login page.................................................passed
+And login page is loaded successfully.......................................passed
+When enter valid credentials................................................passed
+Then user should be redirected to dashboard.................................failed
+]]></system-out>
+</testcase>
+<testcase classname="use login functionality" name="login with invalid credentials" time="14.74">
+<failure type="java.lang.AssertionError" message="The following asserts failed:
+	expected [] but found [Your password is invalid]">
+<![CDATA[java.lang.AssertionError: The following asserts failed:
+	expected [] but found [Your password is invalid]
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:46)
+	at org.testng.asserts.SoftAssert.assertAll(SoftAssert.java:30)
+	at cucumberTest.TestStepDefination.user_should_see_an_error_message(TestStepDefination.java:74)
+	at ✽.user should see an error message(file:///C:/shubham/java/IntellijProjects/testingAUtomationV1/src/test/resource/Test.feature:12)
+]]>
+</failure>
+<system-out><![CDATA[
+Given user is on login page.................................................passed
+And login page is loaded successfully.......................................passed
+When when invalid credentials are entered...................................passed
+Then user should see an error message.......................................failed
+]]></system-out>
+</testcase>
+</testsuite>
